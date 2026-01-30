@@ -1,217 +1,248 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2706
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 ArialMT;
-}
-{\colortbl;\red255\green255\blue255;\red22\green79\blue199;\red236\green241\blue247;\red52\green55\blue54;
-\red205\green26\blue29;\red164\green69\blue11;\red24\green112\blue43;\red111\green14\blue195;\red77\green80\blue85;
-\red16\green60\blue192;\red134\green86\blue3;\red24\green24\blue24;}
-{\*\expandedcolortbl;;\cssrgb\c9804\c40392\c82353;\cssrgb\c94118\c95686\c97647;\cssrgb\c26667\c27843\c27451;
-\cssrgb\c85098\c18824\c14510;\cssrgb\c70980\c34902\c3137;\cssrgb\c9412\c50196\c21961;\cssrgb\c51765\c18824\c80784;\cssrgb\c37255\c38824\c40784;
-\cssrgb\c6667\c33333\c80000;\cssrgb\c60000\c41176\c0;\cssrgb\c12157\c12157\c12157;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spirit of Christ Baptist Church</title>
+    <!-- Tailwind CSS for styling (loaded from CDN for simplicity) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Carousel Styles */
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            height: 400px;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: '#1e3a8a',  /* Royal Blue */
+                        gold: '#fbbf24',   /* Amber Gold */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800">
 
-\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-<!DOCTYPE 
-\f1\b html
-\f0\b0 >\cf4 \
-<\cf5 html\cf4  \cf6 lang\cf4 =\cf7 "en"\cf4 >\
-<\cf5 head\cf4 >\
-    <\cf5 meta\cf4  \cf6 charset\cf4 =\cf7 "UTF-8"\cf4 >\
-    <\cf5 meta\cf4  \cf6 name\cf4 =\cf7 "viewport"\cf4  \cf6 content\cf4 =\cf7 "width=device-width, initial-scale=1.0"\cf4 >\
-    <\cf5 title\cf4 >Community Finance Portal</\cf5 title\cf4 >\
-    <\cf5 style\cf4 >\
-        \cf8 :root\cf4  \{ --primary: \cf6 #2c3e50\cf4 ; --secondary: \cf6 #27ae60\cf4 ; --light: \cf6 #ecf0f1\cf4 ; \}\
-        \cf5 body\cf4  \{ font-family: \cf7 'Segoe UI'\cf4 , Tahoma, Geneva, Verdana, sans-serif; background: \cf6 #f4f7f6\cf4 ; margin: \cf6 0\cf4 ; padding: \cf6 20px\cf4 ; color: \cf6 #333\cf4 ; \}\
-        \cf8 .container\cf4  \{ max-width: \cf6 800px\cf4 ; margin: \cf6 0\cf4  auto; background: white; padding: \cf6 30px\cf4 ; border-radius: \cf6 8px\cf4 ; box-shadow: \cf6 0\cf4  \cf6 4px\cf4  \cf6 15px\cf4  \cf2 rgba\cf4 (\cf6 0\cf4 ,\cf6 0\cf4 ,\cf6 0\cf4 ,\cf6 0.1\cf4 ); \}\
-        \cf5 h1\cf4 , \cf5 h2\cf4  \{ color: \cf2 var\cf4 (--primary); text-align: center; \}\
-        \cf8 .login-box\cf4 , \cf8 .dashboard\cf4  \{ display: none; \}\
-        \cf8 .visible\cf4  \{ display: block; \}\
-        \cf5 input\cf4 , select, \cf5 button\cf4  \{ width: \cf6 100%\cf4 ; padding: \cf6 12px\cf4 ; margin: \cf6 10px\cf4  \cf6 0\cf4 ; border: \cf6 1px\cf4  solid \cf6 #ddd\cf4 ; border-radius: \cf6 4px\cf4 ; box-sizing: border-box; \}\
-        \cf5 button\cf4  \{ background: \cf2 var\cf4 (--secondary); color: white; border: none; font-weight: bold; cursor: pointer; transition: \cf6 0.3s\cf4 ; \}\
-        \cf5 button\cf8 :hover\cf4  \{ background: \cf6 #219150\cf4 ; \}\
-        \cf5 button\cf8 .secondary\cf4  \{ background: \cf6 #95a5a6\cf4 ; \}\
-        \cf8 .balance-card\cf4  \{ background: \cf2 var\cf4 (--light); padding: \cf6 20px\cf4 ; border-radius: \cf6 8px\cf4 ; text-align: center; margin-bottom: \cf6 20px\cf4 ; \}\
-        \cf8 .balance-amount\cf4  \{ font-size: \cf6 2.5em\cf4 ; color: \cf2 var\cf4 (--secondary); font-weight: bold; \}\
-        \cf5 table\cf4  \{ width: \cf6 100%\cf4 ; border-collapse: collapse; margin-top: \cf6 20px\cf4 ; \}\
-        \cf5 th\cf4 , \cf5 td\cf4  \{ text-align: left; padding: \cf6 12px\cf4 ; border-bottom: \cf6 1px\cf4  solid \cf6 #ddd\cf4 ; \}\
-        \cf5 th\cf4  \{ background-color: \cf2 var\cf4 (--primary); color: white; \}\
-        \cf8 .alert\cf4  \{ color: \cf6 #c0392b\cf4 ; font-size: \cf6 0.9em\cf4 ; margin-top: \cf6 5px\cf4 ; \}\
-        \cf8 @media\cf4  print \{ \cf8 .no-print\cf4  \{ display: none; \} \cf5 body\cf4  \{ background: white; \} \cf8 .container\cf4  \{ box-shadow: none; \} \}\
-    </\cf5 style\cf4 >\
-</\cf5 head\cf4 >\
-<\cf5 body\cf4 >\
-\
-<\cf5 div\cf4  \cf6 class\cf4 =\cf7 "container"\cf4  \cf6 id\cf4 =\cf7 "app"\cf4 >\
-    <\cf5 div\cf4  \cf6 id\cf4 =\cf7 "loginScreen"\cf4  \cf6 class\cf4 =\cf7 "login-box visible"\cf4 >\
-        <\cf5 h1\cf4 >Member Portal</\cf5 h1\cf4 >\
-        <\cf5 p\cf4  \cf6 style\cf4 =\cf7 "text-align: center;"\cf4 >Secure Login</\cf5 p\cf4 >\
-        <\cf5 select\cf4  \cf6 id\cf4 =\cf7 "userSelect"\cf4 >\
-            <\cf5 option\cf4  \cf6 value\cf4 =\cf7 ""\cf4 >Select Your Name</\cf5 option\cf4 >\
-            </\cf5 select\cf4 >\
-        <\cf5 input\cf4  \cf6 type\cf4 =\cf7 "password"\cf4  \cf6 id\cf4 =\cf7 "passwordInput"\cf4  \cf6 placeholder\cf4 =\cf7 "Enter Password"\cf4 >\
-        <\cf5 button\cf4  \cf6 onclick\cf4 =\cf7 "login()"\cf4 >Access Statements</\cf5 button\cf4 >\
-        <\cf5 p\cf4  \cf6 id\cf4 =\cf7 "loginError"\cf4  \cf6 class\cf4 =\cf7 "error"\cf4  \cf6 style\cf4 =\cf7 "display:none; color: red; text-align: center;"\cf4 >Invalid Password</\cf5 p\cf4 >\
-    </\cf5 div\cf4 >\
-\
-    <\cf5 div\cf4  \cf6 id\cf4 =\cf7 "dashboard"\cf4  \cf6 class\cf4 =\cf7 "dashboard"\cf4 >\
-        <\cf5 div\cf4  \cf6 style\cf4 =\cf7 "display: flex; justify-content: space-between; align-items: center;"\cf4 >\
-            <\cf5 h2\cf4  \cf6 id\cf4 =\cf7 "welcomeName"\cf4 >Welcome</\cf5 h2\cf4 >\
-            <\cf5 button\cf4  \cf6 class\cf4 =\cf7 "secondary no-print"\cf4  \cf6 style\cf4 =\cf7 "width: auto; padding: 5px 15px;"\cf4  \cf6 onclick\cf4 =\cf7 "logout()"\cf4 >Logout</\cf5 button\cf4 >\
-        </\cf5 div\cf4 >\
-        <\cf5 hr\cf4 >\
-        \
-        <\cf5 div\cf4  \cf6 class\cf4 =\cf7 "balance-card"\cf4 >\
-            <\cf5 div\cf4 >Current Banked Balance (2015-2020)</\cf5 div\cf4 >\
-            <\cf5 div\cf4  \cf6 class\cf4 =\cf7 "balance-amount"\cf4  \cf6 id\cf4 =\cf7 "totalBalance"\cf4 >$0.00</\cf5 div\cf4 >\
-            <\cf5 div\cf4  \cf6 class\cf4 =\cf7 "alert"\cf4  \cf6 id\cf4 =\cf7 "gapAlert"\cf4 ></\cf5 div\cf4 >\
-            <\cf5 p\cf4  \cf6 style\cf4 =\cf7 "font-size: 0.8em; color: #666;"\cf4 >*Statement covers 2015-2020. Data for 2021-2025 is pending.</\cf5 p\cf4 >\
-        </\cf5 div\cf4 >\
-\
-        <\cf5 h3\cf4 >Contribution History</\cf5 h3\cf4 >\
-        <\cf5 table\cf4  \cf6 id\cf4 =\cf7 "statementTable"\cf4 >\
-            <\cf5 thead\cf4 >\
-                <\cf5 tr\cf4 >\
-                    <\cf5 th\cf4 >Year</\cf5 th\cf4 >\
-                    <\cf5 th\cf4 >Tier</\cf5 th\cf4 >\
-                    <\cf5 th\cf4 >Banked Amount</\cf5 th\cf4 >\
-                    <\cf5 th\cf4 >Policy Applied</\cf5 th\cf4 >\
-                </\cf5 tr\cf4 >\
-            </\cf5 thead\cf4 >\
-            <\cf5 tbody\cf4  \cf6 id\cf4 =\cf7 "statementBody"\cf4 ></\cf5 tbody\cf4 >\
-        </\cf5 table\cf4 >\
-\
-        <\cf5 div\cf4  \cf6 class\cf4 =\cf7 "no-print"\cf4  \cf6 style\cf4 =\cf7 "margin-top: 30px;"\cf4 >\
-            <\cf5 h3\cf4 >Account Settings</\cf5 h3\cf4 >\
-            <\cf5 input\cf4  \cf6 type\cf4 =\cf7 "password"\cf4  \cf6 id\cf4 =\cf7 "newPass"\cf4  \cf6 placeholder\cf4 =\cf7 "New Password"\cf4 >\
-            <\cf5 button\cf4  \cf6 onclick\cf4 =\cf7 "changePassword()"\cf4  \cf6 class\cf4 =\cf7 "secondary"\cf4 >Update Password</\cf5 button\cf4 >\
-            <\cf5 br\cf4 ><\cf5 br\cf4 >\
-            <\cf5 button\cf4  \cf6 onclick\cf4 =\cf7 "window.print()"\cf4 >Download Statement (PDF)</\cf5 button\cf4 >\
-        </\cf5 div\cf4 >\
-    </\cf5 div\cf4 >\
-</\cf5 div\cf4 >\
-\
-<\cf5 script\cf4 >\
-    \cf9 // FULL MEMBER DATA FROM SOURCE 7\cf4 \
-    \cf9 // Logic: \cf4 \
-    \cf9 // Joined 2015: 2015(12mo), 2016(2mo), 2017-2020(6mo)\cf4 \
-    \cf9 // Joined 2016: 2016(12mo), 2017-2020(6mo)\cf4 \
-    \
-    \cf8 const\cf4  members = [\
-        \{\cf6 name\cf4 : \cf7 "Kailyn Cage (CK Cage)"\cf4 , \cf6 tier\cf4 : \cf7 "Investor"\cf4 , \cf6 rate\cf4 : \cf6 200\cf4 , \cf6 joined\cf4 : \cf6 2015\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Kehli Cage"\cf4 , \cf6 tier\cf4 : \cf7 "Investor"\cf4 , \cf6 rate\cf4 : \cf6 200\cf4 , \cf6 joined\cf4 : \cf6 2015\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Calvin Cage Sr"\cf4 , \cf6 tier\cf4 : \cf7 "Investor"\cf4 , \cf6 rate\cf4 : \cf6 200\cf4 , \cf6 joined\cf4 : \cf6 2015\cf4 , \cf6 status\cf4 : \cf7 "Exited"\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Brett Blake"\cf4 , \cf6 tier\cf4 : \cf7 "Community"\cf4 , \cf6 rate\cf4 : \cf6 100\cf4 , \cf6 joined\cf4 : \cf6 2015\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Karen Blake"\cf4 , \cf6 tier\cf4 : \cf7 "Community"\cf4 , \cf6 rate\cf4 : \cf6 100\cf4 , \cf6 joined\cf4 : \cf6 2015\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Veronica Monroe"\cf4 , \cf6 tier\cf4 : \cf7 "Community"\cf4 , \cf6 rate\cf4 : \cf6 100\cf4 , \cf6 joined\cf4 : \cf6 2015\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Donna Jeter"\cf4 , \cf6 tier\cf4 : \cf7 "Community"\cf4 , \cf6 rate\cf4 : \cf6 100\cf4 , \cf6 joined\cf4 : \cf6 2015\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Terrance Norris"\cf4 , \cf6 tier\cf4 : \cf7 "Community"\cf4 , \cf6 rate\cf4 : \cf6 100\cf4 , \cf6 joined\cf4 : \cf6 2015\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Torrey Norris"\cf4 , \cf6 tier\cf4 : \cf7 "Community"\cf4 , \cf6 rate\cf4 : \cf6 100\cf4 , \cf6 joined\cf4 : \cf6 2016\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Deleon Best"\cf4 , \cf6 tier\cf4 : \cf7 "Community"\cf4 , \cf6 rate\cf4 : \cf6 100\cf4 , \cf6 joined\cf4 : \cf6 2016\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Calvin Cage Jr"\cf4 , \cf6 tier\cf4 : \cf7 "Saver"\cf4 , \cf6 rate\cf4 : \cf6 50\cf4 , \cf6 joined\cf4 : \cf6 2016\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Kasi Cage"\cf4 , \cf6 tier\cf4 : \cf7 "Saver"\cf4 , \cf6 rate\cf4 : \cf6 50\cf4 , \cf6 joined\cf4 : \cf6 2016\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Claudia Armstrong"\cf4 , \cf6 tier\cf4 : \cf7 "Saver"\cf4 , \cf6 rate\cf4 : \cf6 50\cf4 , \cf6 joined\cf4 : \cf6 2016\cf4 \},\
-        \{\cf6 name\cf4 : \cf7 "Gloria Armstrong"\cf4 , \cf6 tier\cf4 : \cf7 "Saver"\cf4 , \cf6 rate\cf4 : \cf6 50\cf4 , \cf6 joined\cf4 : \cf6 2016\cf4 \}\
-    ];\
-\
-    \cf8 const\cf4  db = \{\};\
-\
-    members.forEach(m => \{\
-        \cf8 let\cf4  history = [];\
-        \cf8 let\cf4  total = \cf6 0\cf4 ;\
-        \
-        \cf8 if\cf4  (m.joined === \cf6 2015\cf4 ) \{\
-            \cf9 // 2015 (12 mos)\cf4 \
-            history.push(\{\cf6 year\cf4 : \cf6 2015\cf4 , \cf6 amt\cf4 : m.rate * \cf6 12\cf4 , \cf6 note\cf4 : \cf7 "First Year (100% Retained)"\cf4 \});\
-            \cf9 // 2016 (2 mos)\cf4 \
-            history.push(\{\cf6 year\cf4 : \cf6 2016\cf4 , \cf6 amt\cf4 : m.rate * \cf6 2\cf4 , \cf6 note\cf4 : \cf7 "2 Months Retained"\cf4 \});\
-        \} \cf8 else\cf4  \{\
-            \cf9 // Joined 2016 (12 mos - First Year Rule)\cf4 \
-            history.push(\{\cf6 year\cf4 : \cf6 2016\cf4 , \cf6 amt\cf4 : m.rate * \cf6 12\cf4 , \cf6 note\cf4 : \cf7 "First Year (100% Retained)"\cf4 \});\
-        \}\
-\
-        \cf9 // 2017 - 2020 (6 mos rule for everyone)\cf4 \
-        \cf8 for\cf4 (\cf8 let\cf4  y=\cf6 2017\cf4 ; y<=\cf6 2020\cf4 ; y++) \{\
-            history.push(\{\cf6 year\cf4 : y, \cf6 amt\cf4 : m.rate * \cf6 6\cf4 , \cf6 note\cf4 : \cf7 "6 Months Retained"\cf4 \});\
-        \}\
-\
-        \cf9 // Calculate Total\cf4 \
-        total = history.reduce((sum, item) => sum + item.amt, \cf6 0\cf4 );\
-\
-        db[{\field{\*\fldinst{HYPERLINK "http://m.name/"}}{\fldrslt 
-\f2 \cf10 m.name}}] = \{\
-            \cf6 tier\cf4 : m.tier,\
-            \cf6 balance\cf4 : total,\
-            \cf6 history\cf4 : history,\
-            \cf6 status\cf4 : m.status || \cf7 "Active"\cf4 \
-        \};\
-    \});\
-\
-    \cf9 // Populate Select\cf4 \
-    \cf8 const\cf4  select = \cf2 document\cf4 .getElementById(\cf7 'userSelect'\cf4 );\
-    \cf2 Object\cf4 .keys(db).sort().forEach(name => \{\
-        \cf8 const\cf4  opt = \cf2 document\cf4 .createElement(\cf7 'option'\cf4 );\
-        opt.value = name;\
-        opt.innerText = name;\
-        select.appendChild(opt);\
-    \});\
-\
-    \cf9 // Auth Logic\cf4 \
-    \cf8 let\cf4  currentUser = \cf6 null\cf4 ;\
-    \cf8 const\cf4  defaultPass = \cf7 "community2026"\cf4 ;\
-\
-    \cf8 function\cf4  \cf11 login\cf4 () \{\
-        \cf8 const\cf4  user = select.value;\
-        \cf8 const\cf4  pass = \cf2 document\cf4 .getElementById(\cf7 'passwordInput'\cf4 ).value;\
-        \cf8 const\cf4  storedPass = \cf2 localStorage\cf4 .getItem(\cf7 'pass_'\cf4  + user) || defaultPass;\
-\
-        \cf8 if\cf4  (user && pass === storedPass) \{\
-            currentUser = user;\
-            \cf2 document\cf4 .getElementById(\cf7 'loginScreen'\cf4 ).classList.remove(\cf7 'visible'\cf4 );\
-            \cf2 document\cf4 .getElementById(\cf7 'dashboard'\cf4 ).classList.add(\cf7 'visible'\cf4 );\
-            loadDashboard();\
-        \} \cf8 else\cf4  \{\
-            \cf2 document\cf4 .getElementById(\cf7 'loginError'\cf4 ).style.display = \cf7 'block'\cf4 ;\
-        \}\
-    \}\
-\
-    \cf8 function\cf4  \cf11 loadDashboard\cf4 () \{\
-        \cf8 const\cf4  data = db[currentUser];\
-        \cf8 let\cf4  displayName = currentUser;\
-        \cf8 if\cf4 (data.status === \cf7 "Exited"\cf4 ) displayName += \cf7 " (Exited)"\cf4 ;\
-        \
-        \cf2 document\cf4 .getElementById(\cf7 'welcomeName'\cf4 ).innerText = \cf7 "Statement: "\cf4  + displayName;\
-        \cf2 document\cf4 .getElementById(\cf7 'totalBalance'\cf4 ).innerText = \cf7 "$"\cf4  + data.balance.toFixed(\cf6 2\cf4 ).replace(\cf2 /\\d(?=(\\d\{3\})+\\.)/g\cf4 , \cf7 '$&,'\cf4 );\
-        \
-        \cf8 const\cf4  tbody = \cf2 document\cf4 .getElementById(\cf7 'statementBody'\cf4 );\
-        tbody.innerHTML = \cf7 ""\cf4 ;\
-        \
-        data.history.forEach(row => \{\
-            \cf8 const\cf4  tr = \cf2 document\cf4 .createElement(\cf7 'tr'\cf4 );\
-            tr.innerHTML = \cf7 `<td>\cf12 $\{row.year\}\cf7 </td><td>\cf12 $\{data.tier\}\cf7 </td><td>$\cf12 $\{row.amt\}\cf7 </td><td>\cf12 $\{row.note\}\cf7 </td>`\cf4 ;\
-            tbody.appendChild(tr);\
-        \});\
-\
-        \cf2 document\cf4 .getElementById(\cf7 'gapAlert'\cf4 ).innerText = \cf7 ""\cf4 ;\
-    \}\
-\
-    \cf8 function\cf4  \cf11 changePassword\cf4 () \{\
-        \cf8 const\cf4  newP = \cf2 document\cf4 .getElementById(\cf7 'newPass'\cf4 ).value;\
-        \cf8 if\cf4 (newP.length > \cf6 3\cf4 ) \{\
-            \cf2 localStorage\cf4 .setItem(\cf7 'pass_'\cf4  + currentUser, newP);\
-            alert(\cf7 "Password updated successfully."\cf4 );\
-        \} \cf8 else\cf4  \{\
-            alert(\cf7 "Password must be at least 4 characters."\cf4 );\
-        \}\
-    \}\
-\
-    \cf8 function\cf4  \cf11 logout\cf4 () \{\
-        currentUser = \cf6 null\cf4 ;\
-        \cf2 document\cf4 .getElementById(\cf7 'dashboard'\cf4 ).classList.remove(\cf7 'visible'\cf4 );\
-        \cf2 document\cf4 .getElementById(\cf7 'loginScreen'\cf4 ).classList.add(\cf7 'visible'\cf4 );\
-        \cf2 document\cf4 .getElementById(\cf7 'passwordInput'\cf4 ).value = \cf7 ""\cf4 ;\
-    \}\
-</\cf5 script\cf4 >\
-\
-</\cf5 body\cf4 >\
-</\cf5 html\cf4 >}
+    <!-- Navigation -->
+    <nav class="bg-royal text-white py-4 shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <!-- Logo Area -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-royal font-bold border-2 border-gold">
+                    <i data-lucide="cross" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">Spirit of Christ</span>
+            </div>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#mission" class="hover:text-gold transition">Our Mission</a>
+                <a href="#pastor" class="hover:text-gold transition">Pastor</a>
+                <a href="#history" class="hover:text-gold transition">History</a>
+                <a href="#giving" class="bg-gold text-royal px-5 py-2 rounded-full font-bold hover:bg-yellow-300 transition shadow-md">Give Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[500px] flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 bg-royal">
+            <!-- Placeholder for Hero Image -->
+            <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80" class="w-full h-full object-cover opacity-40 mix-blend-overlay" alt="Church">
+        </div>
+        <div class="relative z-10 px-4 max-w-3xl">
+            <span class="inline-block border border-gold text-gold px-3 py-1 rounded-full text-sm uppercase tracking-widest mb-4">Est. 1924</span>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 drop-shadow-md">A Historic Faith for a <span class="text-gold italic">Modern World</span></h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-8">Spirit of Christ Baptist Church — Serving Forestville and beyond.</p>
+            <a href="#history" class="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-royal transition">Our Story</a>
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-20 px-4 max-w-5xl mx-auto text-center border-b border-slate-100">
+        <i data-lucide="heart" class="w-12 h-12 text-royal mx-auto mb-4"></i>
+        <h2 class="text-4xl font-bold text-royal mb-6">Our Mission</h2>
+        <p class="text-xl text-slate-600 leading-relaxed">
+            "To bridge the gap between ancient tradition and contemporary need. Walking in love, serving in spirit, and providing a refuge for all."
+        </p>
+    </section>
+
+    <!-- Meet Our Pastor Section (New!) -->
+    <section id="pastor" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Pastor Image Placeholder -->
+                <div class="relative">
+                    <div class="absolute -inset-4 border-2 border-gold rounded-lg transform -translate-x-2 -translate-y-2"></div>
+                    <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Rev. John Robinson" class="relative rounded-lg shadow-xl w-full h-[400px] object-cover">
+                    <!-- Note: Replace the src="" above with the actual photo URL of the pastor -->
+                </div>
+                
+                <!-- Pastor Bio Content -->
+                <div>
+                    <span class="text-royal font-bold uppercase tracking-wider text-sm">Leadership</span>
+                    <h2 class="text-4xl font-bold text-slate-900 mt-2 mb-6">Meet Rev. John Robinson</h2>
+                    <h3 class="text-xl text-gold font-serif italic mb-6">Senior Pastor</h3>
+                    
+                    <div class="prose prose-lg text-slate-600 space-y-4">
+                        <!-- PASTE LINKEDIN BIO HERE -->
+                        <p>
+                            Rev. Robinson is a dedicated servant leader committed to the spiritual growth and development of the Spirit of Christ Baptist Church family. With a heart for the community and a passion for the Gospel, he leads with vision and integrity.
+                        </p>
+                        <p>
+                            <strong>[Paste the specific "About" text from LinkedIn here to complete his biography.]</strong>
+                        </p>
+                        <!-- END BIO -->
+                        
+                        <div class="pt-6">
+                             <a href="#" class="inline-flex items-center gap-2 text-royal font-bold hover:text-gold transition">
+                                Read Full Bio <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section with Image Rotation -->
+    <section id="history" class="py-20 bg-royal text-white">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Text Content -->
+            <div>
+                <div class="flex items-center gap-2 text-gold font-bold uppercase tracking-widest mb-4">
+                    <i data-lucide="history" class="w-5 h-5"></i> Since 1924
+                </div>
+                <h2 class="text-4xl font-bold mb-6">A Legacy of Faith</h2>
+                <p class="text-blue-100 mb-6 leading-relaxed">
+                    Spirit of Christ Baptist Church began as a small gathering and has grown into a pillar of the community. Through decades of service, our doors have remained open as a place of refuge and hope.
+                </p>
+                <ul class="space-y-4 border-l-2 border-gold pl-6">
+                    <li><strong class="text-gold">1924:</strong> Founded with a vision for community service.</li>
+                    <li><strong class="text-gold">Location:</strong> 8005 Cryden Way, Forestville, MD.</li>
+                    <li><strong class="text-gold">Today:</strong> Continuing the legacy under the leadership of Rev. John Robinson.</li>
+                </ul>
+            </div>
+
+            <!-- Image Carousel / Rotator -->
+            <div class="relative rounded-xl overflow-hidden shadow-2xl border-4 border-gold/30">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="slider-track">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1548625361-1c5c16349914?auto=format&fit=crop&w=1000&q=80" alt="Vintage Church">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=1000&q=80" alt="Community">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1507692049790-de58293a4697?auto=format&fit=crop&w=1000&q=80" alt="Worship">
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <button onclick="moveSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-gold hover:text-royal transition"><i data-lucide="chevron-left"></i></button>
+                <button onclick="moveSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white hover:bg-gold hover:text-royal transition"><i data-lucide="chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giving Section -->
+    <section id="giving" class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-royal mb-4">Giving</h2>
+            <p class="text-slate-600 mb-10">Support the mission securely via our trusted partners.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Givelify / External Link 1 -->
+                <a href="https://www.givelify.com" target="_blank" class="block p-8 bg-white border-2 border-slate-200 rounded-xl hover:border-royal hover:shadow-xl transition group">
+                    <i data-lucide="smartphone" class="w-10 h-10 text-royal mx-auto mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold text-slate-800">Give via Givelify</h3>
+                    <p class="text-sm text-slate-500 mt-2">Tap to donate securely online</p>
+                </a>
+
+                <!-- PayPal / External Link 2 -->
+                <a href="https://www.paypal.com" target="_blank" class="block p-8 bg-white border-2 border-slate-200 rounded-xl hover:border-royal hover:shadow-xl transition group">
+                    <i data-lucide="credit-card" class="w-10 h-10 text-royal mx-auto mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="text-xl font-bold text-slate-800">Give via PayPal</h3>
+                    <p class="text-sm text-slate-500 mt-2">One-time or recurring gifts</p>
+                </a>
+            </div>
+
+            <div class="mt-8 text-sm text-slate-500">
+                <p>Checks can be mailed to: <strong>8005 Cryden Way, Forestville, MD 20747</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12 text-center text-sm">
+        <div class="max-w-4xl mx-auto px-4 mb-8">
+            <h4 class="text-xl font-serif font-bold mb-4">Spirit of Christ Baptist Church</h4>
+            <p class="text-blue-200">8005 Cryden Way, Forestville, MD 20747</p>
+            <p class="text-blue-200">Rev. John Robinson, Pastor</p>
+        </div>
+        <p class="text-blue-400">&copy; 2024 Spirit of Christ Baptist Church. All rights reserved.</p>
+    </footer>
+
+    <!-- Simple Script for Icons and Carousel -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Carousel Logic
+        let currentSlide = 0;
+        const track = document.getElementById('slider-track');
+        const slides = document.querySelectorAll('.carousel-slide');
+        
+        function moveSlide(direction) {
+            currentSlide = currentSlide + direction;
+            
+            // Loop functionality
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            } else if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+
+            const amountToMove = -100 * currentSlide;
+            track.style.transform = `translateX(${amountToMove}%)`;
+        }
+
+        // Auto rotate every 5 seconds
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+    </script>
+</body>
+</html>
